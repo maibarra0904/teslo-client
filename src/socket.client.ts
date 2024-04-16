@@ -4,7 +4,7 @@ let socket: Socket;
 
 export const connectToServer = ( token: string) => {
 
-    const manager = new Manager(import.meta.env.URL_SOCKET, {
+    const manager = new Manager("https://teslo-postgres.onrender.com/socket.io/socket.io.js", {
         extraHeaders: {
             authorization: `${token}`
         }
